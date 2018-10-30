@@ -1,8 +1,10 @@
 ;; Ejemplo. Calculo de solapamiento entre observaciones
 ;; TODO List
 ;;     - Arreglar overlap-condition (DONE)
-;;     - Incluir nueva regla/restriccion para observaciones demasiado cercanas aunque no solapen
+;;     - Incluir nueva regla/restriccion para observaciones demasiado cercanas aunque no solapen (DONE)
 ;;     - No me gusta el hecho 'restriction' tal y como está. No generaliza muy bien...
+;;     - Limitar el cálculo de restricciones a un periodo de tiempo dado
+;;     - Implementar restricciones para la transición entre observaciones (en verdad, aplican sobre los modos pero para el caso es lo mismo)
 ;;     - Testing con cientos o miles de observaciones. Escribir un generador.
 
 (deftemplate observation
@@ -94,13 +96,4 @@
 		=>
 		(assert (incompat-observations-time-overlapping (instance-1 ?id1) (instance-2 ?id2))))        
 
-;; TODO por terminar. 
-;; Crear un hecho "too-close" implica calcularlo para todos los pares de observaciones, y es posible que esto no escale. :-( Alternativas?		
-;;(defrule incompat-observations-tooclose-rule
-;;		?o1 <- (observation (obsname ?n1) (instance-id ?id1))
-;;		?o2 <- (observation (obsname ?n2) (instance-id ?id2))
-;;		(and (or (?tover <- (time-overlapping (instance-1 ?id1) (instance-2 ?id2)))
-;;		         (?close <- (too-close (instance-1 ?id1) (instance-2 ?id2)))
-;;		     (restriction (name too-close) (incompat-observations ?n1 ?n2)))
-;;		=>
-;;		(assert (incompat-observations-tooclose (instance-1 ?id1) (instance-2 ?id2))))		 		
+		 		
