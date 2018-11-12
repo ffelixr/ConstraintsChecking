@@ -1,7 +1,11 @@
 ;; Ejemplo. Calculo de solapamiento entre observaciones
 ;; TODO List
 ;;     - Arreglar overlap-condition (DONE)
-;;     - Incluir nueva regla/restriccion para observaciones demasiado cercanas aunque no solapen (DONE)
+;;     - Incluir nueva regla/restriccion para observaciones demasiado
+;;     cercanas aunque no solapen (DONE)
+;;     - Restricciones en el uso de recursos (power & bandwidth)
+;;     - Hacer uso de los modulos para organizar la ejecucion de las
+;;       distintas reglas
 ;;     - No me gusta el hecho 'restriction' tal y como está. No generaliza muy bien...
 ;;     - Limitar el cálculo de restricciones a un periodo de tiempo dado
 ;;     - Implementar restricciones para la transición entre observaciones (en verdad, aplican sobre los modos pero para el caso es lo mismo)
@@ -59,6 +63,8 @@
         (observation (start-time 50) (end-time 60) (obsname MAG_HIGH) (experiment MAG) (module DEFAULT) (instance-id 9))
         (restriction (name cant-overlap-observations) (incompat-observations MAG_EQUAL8 EUI_FLUSH))
         (restriction (name too-close) (incompat-observations MAG_HIGH EUI_FLUSH) (delta 10))
+        (max-power-allowed 200)
+        (max-bandwidth-allowed 2000)
         (start-calculation))
 		
 (defrule init 
