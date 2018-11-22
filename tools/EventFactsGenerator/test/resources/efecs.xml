@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventfile>
+<header format_version="1" gen_time="2017-142T15:19:34Z" validity_start="2020-004T21:28:48Z" validity_end="2020-179T18:37:12Z" spacecraft="Solar Orbiter" icd_version="MOC-SOC-1.2"/>
+<events>
+<MTP_BOUND time="2020-004T21:28:48Z" duration="15109704" m_count="03"/>
+<STP_BOUND time="2020-004T21:28:48Z" duration="603612" m_count="03" o_count="046" s_count="01"/>
+<HGA_PT time="2020-005T12:36:23Z" duration="1091"/>
+<TX_ON time="2020-005T12:49:34Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-005T12:56:34Z" duration="326" tm_rate="993980"/>
+<HK_DUMP time="2020-005T13:02:00Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-005T13:04:53Z" duration="13781" tm_rate="993980"/>
+<WOL time="2020-006T23:26:23Z" duration="4500"/>
+<HGA_PT time="2020-007T12:32:52Z" duration="1091"/>
+<TX_ON time="2020-007T12:46:03Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-007T12:53:03Z" duration="317" tm_rate="993980"/>
+<HK_DUMP time="2020-007T12:58:19Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-007T13:01:12Z" duration="13791" tm_rate="993980"/>
+<SA_ROT time="2020-009T12:29:21Z" duration="1091" angle="14"/>
+<HGA_PT time="2020-009T12:29:21Z" duration="1091"/>
+<TX_ON time="2020-009T12:42:32Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-009T12:49:32Z" duration="308" tm_rate="993980"/>
+<HK_DUMP time="2020-009T12:54:40Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-009T12:57:33Z" duration="13799" tm_rate="993980"/>
+<WOL time="2020-009T23:18:36Z" duration="4500"/>
+<STP_BOUND time="2020-011T21:09:00Z" duration="603431" m_count="03" o_count="047" s_count="02"/>
+<HGA_PT time="2020-012T12:16:14Z" duration="1091"/>
+<TX_ON time="2020-012T12:29:25Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-012T12:36:25Z" duration="296" tm_rate="993980"/>
+<HK_DUMP time="2020-012T12:41:21Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-012T12:44:14Z" duration="13811" tm_rate="993980"/>
+<WOL time="2020-012T23:05:23Z" duration="4500"/>
+<HGA_PT time="2020-014T12:10:20Z" duration="1091"/>
+<TX_ON time="2020-014T12:23:31Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-014T12:30:31Z" duration="287" tm_rate="993980"/>
+<HK_DUMP time="2020-014T12:35:17Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-014T12:38:10Z" duration="13821" tm_rate="993980"/>
+<TCM time="2020-015T13:26:23Z" duration="10800"/>
+<WOL time="2020-015T22:56:23Z" duration="4500"/>
+<HGA_PT time="2020-016T12:06:11Z" duration="1091"/>
+<TX_ON time="2020-016T12:19:22Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-016T12:26:22Z" duration="279" tm_rate="993980"/>
+<HK_DUMP time="2020-016T12:31:00Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-016T12:33:53Z" duration="13829" tm_rate="993980"/>
+<STP_BOUND time="2020-018T20:46:11Z" duration="603469" m_count="03" o_count="048" s_count="03"/>
+<WOL time="2020-018T22:46:11Z" duration="4500"/>
+<SA_ROT time="2020-019T11:56:05Z" duration="1091" angle="11"/>
+<HGA_PT time="2020-019T11:56:05Z" duration="1091"/>
+<TX_ON time="2020-019T12:09:16Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-019T12:16:16Z" duration="268" tm_rate="993980"/>
+<HK_DUMP time="2020-019T12:20:44Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-019T12:23:37Z" duration="13839" tm_rate="993980"/>
+<HGA_PT time="2020-021T11:47:08Z" duration="1091"/>
+<TX_ON time="2020-021T12:00:19Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-021T12:07:19Z" duration="260" tm_rate="993980"/>
+<HK_DUMP time="2020-021T12:11:39Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-021T12:14:32Z" duration="13847" tm_rate="993980"/>
+<WOL time="2020-021T22:35:59Z" duration="4500"/>
+<HGA_PT time="2020-023T11:40:37Z" duration="1091"/>
+<TX_ON time="2020-023T11:53:48Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-023T12:00:48Z" duration="253" tm_rate="993980"/>
+<HK_DUMP time="2020-023T12:05:00Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-023T12:07:53Z" duration="13855" tm_rate="993980"/>
+<WOL time="2020-024T22:25:47Z" duration="4500"/>
+<STP_BOUND time="2020-025T20:24:00Z" duration="603107" m_count="03" o_count="049" s_count="04"/>
+<HGA_PT time="2020-026T11:29:54Z" duration="1091"/>
+<TX_ON time="2020-026T11:43:05Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-026T11:50:05Z" duration="242" tm_rate="993980"/>
+<HK_DUMP time="2020-026T11:54:07Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-026T11:57:00Z" duration="13865" tm_rate="993980"/>
+<WOL time="2020-027T22:15:00Z" duration="4500"/>
+<HGA_PT time="2020-028T11:24:34Z" duration="1091"/>
+<TX_ON time="2020-028T11:37:45Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-028T11:44:45Z" duration="235" tm_rate="993980"/>
+<HK_DUMP time="2020-028T11:48:39Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-028T11:51:32Z" duration="13873" tm_rate="993980"/>
+<SA_ROT time="2020-029T11:18:34Z" duration="1091" angle="8"/>
+<HGA_PT time="2020-030T11:15:01Z" duration="1091"/>
+<TX_ON time="2020-030T11:28:12Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-030T11:35:12Z" duration="229" tm_rate="993980"/>
+<HK_DUMP time="2020-030T11:39:00Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-030T11:41:53Z" duration="13879" tm_rate="993980"/>
+<WOL time="2020-030T22:03:36Z" duration="4500"/>
+<TCM time="2020-031T12:31:47Z" duration="10800"/>
+<STP_BOUND time="2020-032T19:55:47Z" duration="628703" m_count="03" o_count="050" s_count="05"/>
+<HGA_PT time="2020-033T11:03:41Z" duration="1091"/>
+<TX_ON time="2020-033T11:16:52Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-033T11:23:52Z" duration="219" tm_rate="993980"/>
+<HK_DUMP time="2020-033T11:27:30Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-033T11:30:23Z" duration="13889" tm_rate="993980"/>
+<WOL time="2020-033T21:52:11Z" duration="4500"/>
+<HGA_PT time="2020-035T10:55:57Z" duration="1091"/>
+<TX_ON time="2020-035T11:09:08Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-035T11:16:08Z" duration="212" tm_rate="993980"/>
+<HK_DUMP time="2020-035T11:19:40Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-035T11:22:33Z" duration="13895" tm_rate="993980"/>
+<WOL time="2020-036T21:40:47Z" duration="4500"/>
+<HGA_PT time="2020-037T19:37:23Z" duration="1091"/>
+<TX_ON time="2020-037T19:50:34Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-037T19:57:34Z" duration="206" tm_rate="993980"/>
+<HK_DUMP time="2020-037T20:01:00Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-037T20:03:53Z" duration="13900" tm_rate="993980"/>
+<SOLAR_CONJ_START time="2020-038T00:00:00Z"/>
+<TCM time="2020-038T20:51:35Z" duration="10800"/>
+<SA_ROT time="2020-039T19:33:14Z" duration="1091" angle="4"/>
+<STP_BOUND time="2020-040T02:34:10Z" duration="603144" m_count="03" o_count="051" s_count="06"/>
+<HGA_PT time="2020-040T19:27:17Z" duration="1091"/>
+<TX_ON time="2020-040T19:40:28Z" duration="24756" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<HGA_PT time="2020-040T23:27:17Z" duration="1091"/>
+<HGA_PT time="2020-042T19:21:20Z" duration="1091"/>
+<TX_ON time="2020-042T19:34:31Z" duration="24756" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<TCM time="2020-042T20:39:36Z" duration="10800"/>
+<HGA_PT time="2020-042T23:21:20Z" duration="1091"/>
+<WOL time="2020-043T04:22:11Z" duration="4500"/>
+<SOLAR_CONJ_END time="2020-043T23:59:59Z"/>
+<HGA_PT time="2020-044T19:09:58Z" duration="1091"/>
+<TX_ON time="2020-044T19:23:09Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-044T19:30:09Z" duration="184" tm_rate="993980"/>
+<HK_DUMP time="2020-044T19:33:13Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-044T19:36:06Z" duration="13922" tm_rate="993980"/>
+<TCM time="2020-044T12:00:00Z" duration="10800"/>
+<GAM time="2020-045T00:00:00Z" duration="3600" planet="EARTH"/>
+<WOL time="2020-046T04:06:34Z" duration="4500"/>
+<STP_BOUND time="2020-047T02:06:34Z" duration="603073" m_count="03" o_count="052" s_count="07"/>
+<HGA_PT time="2020-047T18:59:47Z" duration="1091"/>
+<TX_ON time="2020-047T19:12:58Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-047T19:19:58Z" duration="184" tm_rate="993980"/>
+<HK_DUMP time="2020-047T19:23:02Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-047T19:25:55Z" duration="13922" tm_rate="993980"/>
+<WOL time="2020-049T03:55:11Z" duration="4500"/>
+<SA_ROT time="2020-049T18:54:20Z" duration="1091" angle="1"/>
+<HGA_PT time="2020-049T18:54:20Z" duration="1091"/>
+<TX_ON time="2020-049T19:07:31Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-049T19:14:31Z" duration="190" tm_rate="993980"/>
+<HK_DUMP time="2020-049T19:17:41Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-049T19:20:34Z" duration="13916" tm_rate="993980"/>
+<HGA_PT time="2020-051T18:42:52Z" duration="1091"/>
+<TX_ON time="2020-051T18:56:03Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-051T19:03:03Z" duration="196" tm_rate="993980"/>
+<HK_DUMP time="2020-051T19:06:19Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-051T19:09:12Z" duration="13910" tm_rate="993980"/>
+<WOL time="2020-052T03:43:46Z" duration="4500"/>
+<TCM time="2020-052T19:56:59Z" duration="10800"/>
+<STP_BOUND time="2020-054T01:37:47Z" duration="603144" m_count="03" o_count="053" s_count="08"/>
+<HGA_PT time="2020-054T18:30:48Z" duration="1091"/>
+<TX_ON time="2020-054T18:43:59Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-054T18:50:59Z" duration="206" tm_rate="993980"/>
+<HK_DUMP time="2020-054T18:54:25Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-054T18:57:18Z" duration="13900" tm_rate="993980"/>
+<WOL time="2020-055T03:31:47Z" duration="4500"/>
+<HGA_PT time="2020-056T18:27:09Z" duration="1091"/>
+<TX_ON time="2020-056T18:40:20Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-056T18:47:20Z" duration="212" tm_rate="993980"/>
+<HK_DUMP time="2020-056T18:50:52Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-056T18:53:45Z" duration="13894" tm_rate="993980"/>
+<WOL time="2020-058T03:22:11Z" duration="4500"/>
+<HGA_PT time="2020-058T18:15:05Z" duration="1091"/>
+<TX_ON time="2020-058T18:28:16Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-058T18:35:16Z" duration="218" tm_rate="993980"/>
+<HK_DUMP time="2020-058T18:38:54Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-058T18:41:47Z" duration="13888" tm_rate="993980"/>
+<SA_ROT time="2020-059T18:15:04Z" duration="1091" angle="2"/>
+<STP_BOUND time="2020-061T01:10:11Z" duration="603108" m_count="03" o_count="054" s_count="09"/>
+<WOL time="2020-061T03:10:11Z" duration="4500"/>
+<HGA_PT time="2020-061T18:03:01Z" duration="1091"/>
+<TX_ON time="2020-061T18:16:12Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-061T18:23:12Z" duration="227" tm_rate="993980"/>
+<HK_DUMP time="2020-061T18:26:58Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-061T18:29:51Z" duration="13880" tm_rate="993980"/>
+<HGA_PT time="2020-063T17:59:23Z" duration="1091"/>
+<TX_ON time="2020-063T18:12:34Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-063T18:19:34Z" duration="233" tm_rate="993980"/>
+<HK_DUMP time="2020-063T18:23:26Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-063T18:26:19Z" duration="13874" tm_rate="993980"/>
+<WOL time="2020-064T03:00:35Z" duration="4500"/>
+<HGA_PT time="2020-065T17:46:43Z" duration="1091"/>
+<TX_ON time="2020-065T17:59:54Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-065T18:06:54Z" duration="239" tm_rate="993980"/>
+<HK_DUMP time="2020-065T18:10:52Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-065T18:13:45Z" duration="13868" tm_rate="993980"/>
+<WOL time="2020-067T02:48:34Z" duration="4500"/>
+<STP_BOUND time="2020-068T00:41:59Z" duration="603035" m_count="03" o_count="055" s_count="10"/>
+<HGA_PT time="2020-068T17:34:03Z" duration="1091"/>
+<TX_ON time="2020-068T17:47:14Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-068T17:54:14Z" duration="247" tm_rate="993980"/>
+<HK_DUMP time="2020-068T17:58:20Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-068T18:01:13Z" duration="13861" tm_rate="993980"/>
+<SA_ROT time="2020-069T17:29:14Z" duration="1091" angle="4"/>
+<WOL time="2020-070T02:31:48Z" duration="4500"/>
+<HGA_PT time="2020-070T17:26:49Z" duration="1091"/>
+<TX_ON time="2020-070T17:40:00Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-070T17:47:00Z" duration="253" tm_rate="993980"/>
+<HK_DUMP time="2020-070T17:51:12Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-070T17:54:05Z" duration="13855" tm_rate="993980"/>
+<HGA_PT time="2020-072T17:15:57Z" duration="1091"/>
+<TX_ON time="2020-072T17:29:08Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-072T17:36:08Z" duration="259" tm_rate="993980"/>
+<HK_DUMP time="2020-072T17:40:26Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-072T17:43:19Z" duration="13849" tm_rate="993980"/>
+<WOL time="2020-073T02:19:47Z" duration="4500"/>
+<STP_BOUND time="2020-075T00:12:34Z" duration="602930" m_count="03" o_count="056" s_count="11"/>
+<HGA_PT time="2020-075T17:01:29Z" duration="1091"/>
+<TX_ON time="2020-075T17:14:40Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-075T17:21:40Z" duration="267" tm_rate="993980"/>
+<HK_DUMP time="2020-075T17:26:06Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-075T17:28:59Z" duration="13840" tm_rate="993980"/>
+<WOL time="2020-076T02:06:34Z" duration="4500"/>
+<HGA_PT time="2020-077T16:53:39Z" duration="1091"/>
+<TX_ON time="2020-077T17:06:50Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-077T17:13:50Z" duration="273" tm_rate="993980"/>
+<HK_DUMP time="2020-077T17:18:22Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-077T17:21:15Z" duration="13835" tm_rate="993980"/>
+<WOL time="2020-079T01:52:47Z" duration="4500"/>
+<SA_ROT time="2020-079T16:41:36Z" duration="1091" angle="6"/>
+<HGA_PT time="2020-079T16:41:36Z" duration="1091"/>
+<TX_ON time="2020-079T16:54:47Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-079T17:01:47Z" duration="279" tm_rate="993980"/>
+<HK_DUMP time="2020-079T17:06:25Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-079T17:09:18Z" duration="13828" tm_rate="993980"/>
+<STP_BOUND time="2020-081T23:41:24Z" duration="602676" m_count="03" o_count="057" s_count="12"/>
+<WOL time="2020-082T01:41:24Z" duration="4500"/>
+<HGA_PT time="2020-082T16:25:19Z" duration="1091"/>
+<TX_ON time="2020-082T16:38:30Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-082T16:45:30Z" duration="287" tm_rate="993980"/>
+<HK_DUMP time="2020-082T16:50:16Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-082T16:53:09Z" duration="13820" tm_rate="993980"/>
+<HGA_PT time="2020-084T16:16:16Z" duration="1091"/>
+<TX_ON time="2020-084T16:29:27Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-084T16:36:27Z" duration="292" tm_rate="993980"/>
+<HK_DUMP time="2020-084T16:41:19Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-084T16:44:12Z" duration="13815" tm_rate="993980"/>
+<WOL time="2020-085T01:27:35Z" duration="4500"/>
+<HGA_PT time="2020-086T16:03:02Z" duration="1091"/>
+<TX_ON time="2020-086T16:16:13Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-086T16:23:13Z" duration="298" tm_rate="993980"/>
+<HK_DUMP time="2020-086T16:28:11Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-086T16:31:04Z" duration="13809" tm_rate="993980"/>
+<WOL time="2020-088T01:13:11Z" duration="4500"/>
+<STP_BOUND time="2020-088T23:06:00Z" duration="602783" m_count="03" o_count="058" s_count="13"/>
+<SA_ROT time="2020-089T15:44:58Z" duration="1091" angle="10"/>
+<HGA_PT time="2020-089T15:44:58Z" duration="1091"/>
+<TX_ON time="2020-089T15:58:09Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-089T16:05:09Z" duration="306" tm_rate="993980"/>
+<HK_DUMP time="2020-089T16:10:15Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-089T16:13:08Z" duration="13800" tm_rate="993980"/>
+<WOL time="2020-091T01:01:11Z" duration="4500"/>
+<HGA_PT time="2020-091T15:34:43Z" duration="1091"/>
+<TX_ON time="2020-091T15:47:54Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-091T15:54:54Z" duration="312" tm_rate="993980"/>
+<HK_DUMP time="2020-091T16:00:06Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-091T16:02:59Z" duration="13795" tm_rate="993980"/>
+<WOL time="2020-092T03:00:00Z" duration="4500"/>
+<MAG_CAL_ROLL time="2020-092T04:34:10Z" duration="43802"/>
+<HGA_PT time="2020-093T15:20:16Z" duration="1091"/>
+<TX_ON time="2020-093T15:33:27Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-093T15:40:27Z" duration="318" tm_rate="993980"/>
+<HK_DUMP time="2020-093T15:45:45Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-093T15:48:38Z" duration="13788" tm_rate="993980"/>
+<WOL time="2020-094T00:42:35Z" duration="4500"/>
+<STP_BOUND time="2020-095T22:32:23Z" duration="602675" m_count="03" o_count="059" s_count="14"/>
+<HGA_PT time="2020-096T14:59:48Z" duration="1091"/>
+<TX_ON time="2020-096T15:12:59Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-096T15:19:59Z" duration="327" tm_rate="993980"/>
+<HK_DUMP time="2020-096T15:25:25Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-096T15:28:18Z" duration="13780" tm_rate="993980"/>
+<WOL time="2020-097T00:27:35Z" duration="4500"/>
+<HGA_PT time="2020-098T14:47:44Z" duration="1091"/>
+<TX_ON time="2020-098T15:00:55Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-098T15:07:55Z" duration="333" tm_rate="993980"/>
+<HK_DUMP time="2020-098T15:13:27Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-098T15:16:20Z" duration="13775" tm_rate="993980"/>
+<SA_ROT time="2020-099T14:38:43Z" duration="1091" angle="15"/>
+<WOL time="2020-100T00:12:36Z" duration="4500"/>
+<HGA_PT time="2020-100T14:32:04Z" duration="1091"/>
+<TX_ON time="2020-100T14:45:15Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-100T14:52:15Z" duration="340" tm_rate="993980"/>
+<HK_DUMP time="2020-100T14:57:55Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-100T15:00:48Z" duration="13766" tm_rate="993980"/>
+<STP_BOUND time="2020-102T21:56:58Z" duration="602713" m_count="03" o_count="060" s_count="15"/>
+<WOL time="2020-102T23:56:58Z" duration="4500"/>
+<HGA_PT time="2020-103T14:09:48Z" duration="1091"/>
+<TX_ON time="2020-103T14:22:59Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-103T14:29:59Z" duration="351" tm_rate="993980"/>
+<HK_DUMP time="2020-103T14:35:49Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-103T14:38:42Z" duration="13756" tm_rate="993980"/>
+<HGA_PT time="2020-105T13:54:08Z" duration="1091"/>
+<TX_ON time="2020-105T14:07:19Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-105T14:14:19Z" duration="358" tm_rate="993980"/>
+<HK_DUMP time="2020-105T14:20:17Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-105T14:23:10Z" duration="13748" tm_rate="993980"/>
+<WOL time="2020-105T23:41:59Z" duration="4500"/>
+<HGA_PT time="2020-107T13:40:51Z" duration="1091"/>
+<TX_ON time="2020-107T13:54:02Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-107T14:01:02Z" duration="366" tm_rate="993980"/>
+<HK_DUMP time="2020-107T14:07:08Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-107T14:10:01Z" duration="13741" tm_rate="993980"/>
+<WOL time="2020-108T23:29:24Z" duration="4500"/>
+<SA_ROT time="2020-109T13:24:36Z" duration="1091" angle="21"/>
+<STP_BOUND time="2020-109T21:22:11Z" duration="602820" m_count="03" o_count="061" s_count="16"/>
+<HGA_PT time="2020-110T13:17:58Z" duration="1091"/>
+<TX_ON time="2020-110T13:31:09Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-110T13:38:09Z" duration="379" tm_rate="993980"/>
+<HK_DUMP time="2020-110T13:44:27Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-110T13:47:20Z" duration="13729" tm_rate="993980"/>
+<RSW_START time="2020-111T00:00:00Z"/>
+<HGA_PT time="2020-111T13:17:58Z" duration="1091"/>
+<TX_ON time="2020-111T13:31:09Z" duration="28176" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-111T13:38:09Z" duration="379" tm_rate="993980"/>
+<HK_DUMP time="2020-111T13:44:27Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-111T13:47:20Z" duration="26905" tm_rate="993980"/>
+<HGA_PT time="2020-111T17:17:58Z" duration="1091"/>
+<WOL time="2020-111T23:14:22Z" duration="4500"/>
+<HGA_PT time="2020-112T13:01:40Z" duration="1091"/>
+<TX_ON time="2020-112T13:14:51Z" duration="28536" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-112T13:21:51Z" duration="389" tm_rate="993980"/>
+<HK_DUMP time="2020-112T13:28:19Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-112T13:31:12Z" duration="27254" tm_rate="993980"/>
+<HGA_PT time="2020-112T17:01:40Z" duration="1091"/>
+<HGA_PT time="2020-113T13:01:40Z" duration="1091"/>
+<TX_ON time="2020-113T13:14:51Z" duration="28536" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-113T13:21:51Z" duration="389" tm_rate="993980"/>
+<HK_DUMP time="2020-113T13:28:19Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-113T13:31:12Z" duration="27254" tm_rate="993980"/>
+<HGA_PT time="2020-113T17:01:40Z" duration="1091"/>
+<HGA_PT time="2020-114T12:48:24Z" duration="1091"/>
+<TX_ON time="2020-114T13:01:35Z" duration="28788" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-114T13:08:35Z" duration="399" tm_rate="993980"/>
+<HK_DUMP time="2020-114T13:15:13Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-114T13:18:06Z" duration="27497" tm_rate="993980"/>
+<HGA_PT time="2020-114T16:48:24Z" duration="1091"/>
+<WOL time="2020-114T22:58:12Z" duration="4500"/>
+<HGA_PT time="2020-115T12:48:24Z" duration="1091"/>
+<TX_ON time="2020-115T13:01:35Z" duration="28788" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-115T13:08:35Z" duration="399" tm_rate="993980"/>
+<HK_DUMP time="2020-115T13:15:13Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-115T13:18:06Z" duration="27497" tm_rate="993980"/>
+<HGA_PT time="2020-115T16:48:24Z" duration="1091"/>
+<HGA_PT time="2020-116T12:48:24Z" duration="1091"/>
+<TX_ON time="2020-116T13:01:35Z" duration="28788" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-116T13:08:35Z" duration="399" tm_rate="993980"/>
+<HK_DUMP time="2020-116T13:15:13Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-116T13:18:06Z" duration="27497" tm_rate="993980"/>
+<HGA_PT time="2020-116T16:48:24Z" duration="1091"/>
+<STP_BOUND time="2020-116T20:49:11Z" duration="602927" m_count="03" o_count="062" s_count="17"/>
+<HGA_PT time="2020-117T12:26:38Z" duration="1091"/>
+<TX_ON time="2020-117T12:39:49Z" duration="29256" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-117T12:46:49Z" duration="416" tm_rate="993980"/>
+<HK_DUMP time="2020-117T12:53:45Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-117T12:56:38Z" duration="27946" tm_rate="993980"/>
+<HGA_PT time="2020-117T16:26:38Z" duration="1091"/>
+<WOL time="2020-117T22:44:22Z" duration="4500"/>
+<RSW_END time="2020-118T00:00:00Z"/>
+<SA_ROT time="2020-119T12:11:32Z" duration="1091" angle="27"/>
+<HGA_PT time="2020-119T12:11:32Z" duration="1091"/>
+<TX_ON time="2020-119T12:24:43Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-119T12:31:43Z" duration="428" tm_rate="993980"/>
+<HK_DUMP time="2020-119T12:38:51Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-119T12:41:44Z" duration="13679" tm_rate="993980"/>
+<WOL time="2020-120T22:31:10Z" duration="4500"/>
+<HGA_PT time="2020-121T12:00:02Z" duration="1091"/>
+<TX_ON time="2020-121T12:13:13Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-121T12:20:13Z" duration="441" tm_rate="993980"/>
+<HK_DUMP time="2020-121T12:27:33Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-121T12:30:26Z" duration="13667" tm_rate="993980"/>
+<STP_BOUND time="2020-123T20:17:58Z" duration="603180" m_count="03" o_count="063" s_count="18"/>
+<WOL time="2020-123T22:17:58Z" duration="4500"/>
+<HGA_PT time="2020-124T11:39:28Z" duration="1091"/>
+<TX_ON time="2020-124T11:52:39Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-124T11:59:39Z" duration="463" tm_rate="993980"/>
+<HK_DUMP time="2020-124T12:07:21Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-124T12:10:14Z" duration="13645" tm_rate="993980"/>
+<HGA_PT time="2020-126T11:26:43Z" duration="1091"/>
+<TX_ON time="2020-126T11:39:54Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-126T11:46:54Z" duration="478" tm_rate="993980"/>
+<HK_DUMP time="2020-126T11:54:52Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-126T11:57:45Z" duration="13629" tm_rate="993980"/>
+<WOL time="2020-126T22:05:59Z" duration="4500"/>
+<HGA_PT time="2020-128T11:17:36Z" duration="1091"/>
+<TX_ON time="2020-128T11:30:47Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-128T11:37:47Z" duration="495" tm_rate="993980"/>
+<HK_DUMP time="2020-128T11:46:01Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-128T11:48:54Z" duration="13612" tm_rate="993980"/>
+<SA_ROT time="2020-129T11:09:42Z" duration="1091" angle="34"/>
+<WOL time="2020-129T21:54:35Z" duration="4500"/>
+<STP_BOUND time="2020-130T19:50:58Z" duration="603218" m_count="03" o_count="064" s_count="19"/>
+<HGA_PT time="2020-131T10:59:21Z" duration="1091"/>
+<TX_ON time="2020-131T11:12:32Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-131T11:19:32Z" duration="523" tm_rate="993980"/>
+<HK_DUMP time="2020-131T11:28:14Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-131T11:31:07Z" duration="13584" tm_rate="993980"/>
+<WOL time="2020-132T21:43:47Z" duration="4500"/>
+<HGA_PT time="2020-133T10:49:35Z" duration="1091"/>
+<TX_ON time="2020-133T11:02:46Z" duration="15000" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-133T11:09:46Z" duration="542" tm_rate="993980"/>
+<HK_DUMP time="2020-133T11:18:48Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-133T11:21:41Z" duration="13565" tm_rate="993980"/>
+<HGA_PT time="2020-135T10:42:49Z" duration="1091"/>
+<TX_ON time="2020-135T10:56:00Z" duration="31200" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-135T11:03:00Z" duration="564" tm_rate="993980"/>
+<HK_DUMP time="2020-135T11:12:24Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-135T11:15:17Z" duration="29743" tm_rate="993980"/>
+<HGA_PT time="2020-135T14:42:49Z" duration="1091"/>
+<WOL time="2020-135T21:34:12Z" duration="4500"/>
+<RSW_START time="2020-136T00:00:00Z"/>
+<HGA_PT time="2020-136T10:42:49Z" duration="1091"/>
+<TX_ON time="2020-136T10:56:00Z" duration="31200" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-136T11:03:00Z" duration="564" tm_rate="993980"/>
+<HK_DUMP time="2020-136T11:12:24Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-136T11:15:17Z" duration="29743" tm_rate="993980"/>
+<HGA_PT time="2020-136T14:42:49Z" duration="1091"/>
+<HGA_PT time="2020-137T10:42:49Z" duration="1091"/>
+<TX_ON time="2020-137T10:56:00Z" duration="31200" station="MLG" tm_rate="995980" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-137T11:03:00Z" duration="564" tm_rate="993980"/>
+<HK_DUMP time="2020-137T11:12:24Z" duration="173" tm_rate="993980"/>
+<SCI_DUMP time="2020-137T11:15:17Z" duration="29743" tm_rate="993980"/>
+<HGA_PT time="2020-137T14:42:49Z" duration="1091"/>
+<STP_BOUND time="2020-137T19:24:36Z" duration="603467" m_count="03" o_count="065" s_count="20"/>
+<HGA_PT time="2020-138T10:29:19Z" duration="1091"/>
+<TX_ON time="2020-138T10:42:30Z" duration="31200" station="MLG" tm_rate="829984" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-138T10:49:30Z" duration="598" tm_rate="827984"/>
+<HK_DUMP time="2020-138T10:59:28Z" duration="208" tm_rate="827984"/>
+<SCI_DUMP time="2020-138T11:02:56Z" duration="29674" tm_rate="827984"/>
+<HGA_PT time="2020-138T14:29:19Z" duration="1091"/>
+<WOL time="2020-138T21:20:59Z" duration="4500"/>
+<SA_ROT time="2020-139T10:25:37Z" duration="1091" angle="42"/>
+<HGA_PT time="2020-139T11:29:19Z" duration="1091"/>
+<TX_ON time="2020-139T11:42:30Z" duration="31200" station="MLG" tm_rate="829984" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-139T11:49:30Z" duration="598" tm_rate="827984"/>
+<HK_DUMP time="2020-139T11:59:28Z" duration="208" tm_rate="827984"/>
+<SCI_DUMP time="2020-139T12:02:56Z" duration="29674" tm_rate="827984"/>
+<HGA_PT time="2020-139T15:29:19Z" duration="1091"/>
+<HGA_PT time="2020-140T10:21:56Z" duration="1091"/>
+<TX_ON time="2020-140T10:35:07Z" duration="31200" station="MLG" tm_rate="829984" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-140T10:42:07Z" duration="622" tm_rate="827984"/>
+<HK_DUMP time="2020-140T10:52:29Z" duration="208" tm_rate="827984"/>
+<SCI_DUMP time="2020-140T10:55:57Z" duration="29650" tm_rate="827984"/>
+<HGA_PT time="2020-140T14:21:56Z" duration="1091"/>
+<HGA_PT time="2020-141T10:21:56Z" duration="1091"/>
+<TX_ON time="2020-141T10:35:07Z" duration="31200" station="MLG" tm_rate="829984" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-141T10:42:07Z" duration="622" tm_rate="827984"/>
+<HK_DUMP time="2020-141T10:52:29Z" duration="208" tm_rate="827984"/>
+<SCI_DUMP time="2020-141T10:55:57Z" duration="29650" tm_rate="827984"/>
+<HGA_PT time="2020-141T14:21:56Z" duration="1091"/>
+<WOL time="2020-141T21:10:47Z" duration="4500"/>
+<HGA_PT time="2020-142T10:18:06Z" duration="1091"/>
+<TX_ON time="2020-142T10:31:17Z" duration="31200" station="MLG" tm_rate="829984" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-142T10:38:17Z" duration="648" tm_rate="827984"/>
+<HK_DUMP time="2020-142T10:49:05Z" duration="208" tm_rate="827984"/>
+<SCI_DUMP time="2020-142T10:52:33Z" duration="29624" tm_rate="827984"/>
+<HGA_PT time="2020-142T14:18:06Z" duration="1091"/>
+<RSW_END time="2020-143T00:00:00Z"/>
+<STP_BOUND time="2020-144T19:02:23Z" duration="604080" m_count="03" o_count="066" s_count="21"/>
+<WOL time="2020-144T21:02:23Z" duration="4500"/>
+<HGA_PT time="2020-145T10:08:10Z" duration="1091"/>
+<TX_ON time="2020-145T10:21:21Z" duration="31200" station="MLG" tm_rate="622488" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-145T10:28:21Z" duration="689" tm_rate="620488"/>
+<HK_DUMP time="2020-145T10:39:49Z" duration="278" tm_rate="620488"/>
+<SCI_DUMP time="2020-145T10:44:27Z" duration="29514" tm_rate="620488"/>
+<HGA_PT time="2020-145T14:08:10Z" duration="1091"/>
+<HGA_PT time="2020-147T10:03:43Z" duration="1091"/>
+<TX_ON time="2020-147T10:16:54Z" duration="31200" station="MLG" tm_rate="622488" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-147T10:23:54Z" duration="718" tm_rate="620488"/>
+<HK_DUMP time="2020-147T10:35:52Z" duration="278" tm_rate="620488"/>
+<SCI_DUMP time="2020-147T10:40:30Z" duration="29484" tm_rate="620488"/>
+<HGA_PT time="2020-147T14:03:43Z" duration="1091"/>
+<WOL time="2020-147T20:56:23Z" duration="4500"/>
+<SA_ROT time="2020-149T10:01:05Z" duration="1091" angle="48"/>
+<HGA_PT time="2020-149T10:01:05Z" duration="1091"/>
+<TX_ON time="2020-149T10:14:16Z" duration="31200" station="MLG" tm_rate="622488" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-149T10:21:16Z" duration="749" tm_rate="620488"/>
+<HK_DUMP time="2020-149T10:33:44Z" duration="278" tm_rate="620488"/>
+<SCI_DUMP time="2020-149T10:38:22Z" duration="29454" tm_rate="620488"/>
+<HGA_PT time="2020-149T14:01:05Z" duration="1091"/>
+<WOL time="2020-150T20:52:11Z" duration="4500"/>
+<STP_BOUND time="2020-151T18:50:23Z" duration="604295" m_count="03" o_count="067" s_count="22"/>
+<HGA_PT time="2020-152T09:58:16Z" duration="1091"/>
+<TX_ON time="2020-152T10:11:27Z" duration="31200" station="MLG" tm_rate="497990" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-152T10:18:27Z" duration="797" tm_rate="495990"/>
+<HK_DUMP time="2020-152T10:31:43Z" duration="348" tm_rate="495990"/>
+<SCI_DUMP time="2020-152T10:37:31Z" duration="29336" tm_rate="495990"/>
+<HGA_PT time="2020-152T13:58:16Z" duration="1091"/>
+<WOL time="2020-153T20:49:12Z" duration="4500"/>
+<HGA_PT time="2020-154T09:54:24Z" duration="1091"/>
+<TX_ON time="2020-154T10:07:35Z" duration="31200" station="MLG" tm_rate="414992" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-154T10:14:35Z" duration="830" tm_rate="412992"/>
+<HK_DUMP time="2020-154T10:28:25Z" duration="418" tm_rate="412992"/>
+<SCI_DUMP time="2020-154T10:35:23Z" duration="29232" tm_rate="412992"/>
+<HGA_PT time="2020-154T13:54:24Z" duration="1091"/>
+<HGA_PT time="2020-156T09:54:07Z" duration="1091"/>
+<TX_ON time="2020-156T10:07:18Z" duration="31056" station="MLG" tm_rate="414992" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-156T10:14:18Z" duration="864" tm_rate="412992"/>
+<HK_DUMP time="2020-156T10:28:42Z" duration="418" tm_rate="412992"/>
+<SCI_DUMP time="2020-156T10:35:40Z" duration="29054" tm_rate="412992"/>
+<HGA_PT time="2020-156T13:54:07Z" duration="1091"/>
+<WOL time="2020-156T20:45:36Z" duration="4500"/>
+<STP_BOUND time="2020-158T18:41:58Z" duration="604512" m_count="03" o_count="068" s_count="23"/>
+<SA_ROT time="2020-159T09:54:52Z" duration="1091" angle="53"/>
+<HGA_PT time="2020-159T09:54:52Z" duration="1091"/>
+<TX_ON time="2020-159T10:08:03Z" duration="30876" station="MLG" tm_rate="311244" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-159T10:15:03Z" duration="918" tm_rate="309244"/>
+<HK_DUMP time="2020-159T10:30:21Z" duration="558" tm_rate="309244"/>
+<SCI_DUMP time="2020-159T10:39:39Z" duration="28680" tm_rate="309244"/>
+<HGA_PT time="2020-159T13:54:52Z" duration="1091"/>
+<WOL time="2020-159T20:43:48Z" duration="4500"/>
+<HGA_PT time="2020-161T09:52:45Z" duration="1091"/>
+<TX_ON time="2020-161T10:05:56Z" duration="30732" station="MLG" tm_rate="311244" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-161T10:12:56Z" duration="954" tm_rate="309244"/>
+<HK_DUMP time="2020-161T10:28:50Z" duration="558" tm_rate="309244"/>
+<SCI_DUMP time="2020-161T10:38:08Z" duration="28499" tm_rate="309244"/>
+<HGA_PT time="2020-161T13:52:45Z" duration="1091"/>
+<WOL time="2020-162T20:38:59Z" duration="4500"/>
+<HGA_PT time="2020-163T09:55:27Z" duration="1091"/>
+<TX_ON time="2020-163T10:08:38Z" duration="30516" station="MLG" tm_rate="311244" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-163T10:15:38Z" duration="991" tm_rate="309244"/>
+<HK_DUMP time="2020-163T10:32:08Z" duration="558" tm_rate="309244"/>
+<SCI_DUMP time="2020-163T10:41:26Z" duration="28248" tm_rate="309244"/>
+<HGA_PT time="2020-163T13:55:27Z" duration="1091"/>
+<RSW_START time="2020-165T00:00:00Z"/>
+<STP_BOUND time="2020-165T18:37:10Z" duration="604658" m_count="03" o_count="069" s_count="24"/>
+<WOL time="2020-165T20:37:10Z" duration="4500"/>
+<SCI_ROLL time="2020-166T00:01:46Z" duration="60" angle="0"/>
+<SCI_ROLL time="2020-166T00:32:46Z" duration="1052" angle="45"/>
+<SCI_ROLL time="2020-166T01:20:18Z" duration="1052" angle="90"/>
+<SCI_ROLL time="2020-166T02:07:50Z" duration="1052" angle="135"/>
+<SCI_ROLL time="2020-166T02:55:22Z" duration="1052" angle="180"/>
+<SCI_ROLL time="2020-166T03:42:54Z" duration="1502" angle="270"/>
+<REF_ROLL time="2020-166T04:37:56Z" duration="1502"/>
+<HGA_PT time="2020-166T09:58:00Z" duration="1091"/>
+<TX_ON time="2020-166T10:11:11Z" duration="30228" station="MLG" tm_rate="226359" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-166T10:18:11Z" duration="1047" tm_rate="224359"/>
+<HK_DUMP time="2020-166T10:35:37Z" duration="770" tm_rate="224359"/>
+<SCI_DUMP time="2020-166T10:48:27Z" duration="27692" tm_rate="224359"/>
+<HGA_PT time="2020-166T13:58:00Z" duration="1091"/>
+<HGA_PT time="2020-167T09:58:00Z" duration="1091"/>
+<TX_ON time="2020-167T10:11:11Z" duration="30228" station="MLG" tm_rate="226359" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-167T10:18:11Z" duration="1047" tm_rate="224359"/>
+<HK_DUMP time="2020-167T10:35:37Z" duration="770" tm_rate="224359"/>
+<SCI_DUMP time="2020-167T10:48:27Z" duration="27692" tm_rate="224359"/>
+<HGA_PT time="2020-167T13:58:00Z" duration="1091"/>
+<HGA_PT time="2020-168T09:57:41Z" duration="1091"/>
+<TX_ON time="2020-168T10:10:52Z" duration="30084" station="MLG" tm_rate="226359" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-168T10:17:52Z" duration="1085" tm_rate="224359"/>
+<HK_DUMP time="2020-168T10:35:56Z" duration="770" tm_rate="224359"/>
+<SCI_DUMP time="2020-168T10:48:46Z" duration="27509" tm_rate="224359"/>
+<HGA_PT time="2020-168T13:57:41Z" duration="1091"/>
+<WOL time="2020-168T20:34:47Z" duration="4500"/>
+<SA_ROT time="2020-169T10:01:44Z" duration="1091" angle="54"/>
+<HGA_PT time="2020-169T10:57:41Z" duration="1091"/>
+<TX_ON time="2020-169T11:10:52Z" duration="30084" station="MLG" tm_rate="226359" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-169T11:17:52Z" duration="1085" tm_rate="224359"/>
+<HK_DUMP time="2020-169T11:35:56Z" duration="770" tm_rate="224359"/>
+<SCI_DUMP time="2020-169T11:48:46Z" duration="27509" tm_rate="224359"/>
+<HGA_PT time="2020-169T14:57:41Z" duration="1091"/>
+<HGA_PT time="2020-170T10:01:34Z" duration="1091"/>
+<TX_ON time="2020-170T10:14:45Z" duration="29868" station="MLG" tm_rate="226359" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-170T10:21:45Z" duration="1122" tm_rate="224359"/>
+<HK_DUMP time="2020-170T10:40:27Z" duration="770" tm_rate="224359"/>
+<SCI_DUMP time="2020-170T10:53:17Z" duration="27256" tm_rate="224359"/>
+<HGA_PT time="2020-170T14:01:34Z" duration="1091"/>
+<HGA_PT time="2020-171T10:01:34Z" duration="1091"/>
+<TX_ON time="2020-171T10:14:45Z" duration="29868" station="MLG" tm_rate="226359" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-171T10:21:45Z" duration="1122" tm_rate="224359"/>
+<HK_DUMP time="2020-171T10:40:27Z" duration="770" tm_rate="224359"/>
+<SCI_DUMP time="2020-171T10:53:17Z" duration="27256" tm_rate="224359"/>
+<HGA_PT time="2020-171T14:01:34Z" duration="1091"/>
+<WOL time="2020-171T20:34:11Z" duration="4500"/>
+<RSW_END time="2020-172T00:00:00Z"/>
+<HGA_PT time="2020-172T10:01:34Z" duration="1091"/>
+<TX_ON time="2020-172T10:14:45Z" duration="29868" station="MLG" tm_rate="226359" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-172T10:21:45Z" duration="1122" tm_rate="224359"/>
+<HK_DUMP time="2020-172T10:40:27Z" duration="770" tm_rate="224359"/>
+<SCI_DUMP time="2020-172T10:53:17Z" duration="27256" tm_rate="224359"/>
+<HGA_PT time="2020-172T14:01:34Z" duration="1091"/>
+<STP_BOUND time="2020-172T18:34:48Z" duration="604800" m_count="03" o_count="070" s_count="25"/>
+<HGA_PT time="2020-173T10:05:53Z" duration="1091"/>
+<TX_ON time="2020-173T10:19:04Z" duration="29580" station="MLG" tm_rate="189884" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-173T10:26:04Z" duration="1178" tm_rate="187884"/>
+<HK_DUMP time="2020-173T10:45:42Z" duration="919" tm_rate="187884"/>
+<SCI_DUMP time="2020-173T11:01:01Z" duration="26763" tm_rate="187884"/>
+<HGA_PT time="2020-173T14:05:53Z" duration="1091"/>
+<WOL time="2020-174T20:34:47Z" duration="4500"/>
+<HGA_PT time="2020-175T10:06:12Z" duration="1091"/>
+<TX_ON time="2020-175T10:19:23Z" duration="29436" station="MLG" tm_rate="189884" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-175T10:26:23Z" duration="1214" tm_rate="187884"/>
+<HK_DUMP time="2020-175T10:46:37Z" duration="919" tm_rate="187884"/>
+<SCI_DUMP time="2020-175T11:01:56Z" duration="26582" tm_rate="187884"/>
+<HGA_PT time="2020-175T14:06:12Z" duration="1091"/>
+<HGA_PT time="2020-177T10:10:42Z" duration="1091"/>
+<TX_ON time="2020-177T10:23:53Z" duration="29220" station="MLG" tm_rate="174060" mod="GMSK" rng="ON"/>
+<SCI_DUMP time="2020-177T10:30:53Z" duration="1250" tm_rate="172060"/>
+<HK_DUMP time="2020-177T10:51:43Z" duration="1004" tm_rate="172060"/>
+<SCI_DUMP time="2020-177T11:08:27Z" duration="26246" tm_rate="172060"/>
+<HGA_PT time="2020-177T14:10:42Z" duration="1091"/>
+<WOL time="2020-177T20:34:48Z" duration="4500"/>
+<SA_ROT time="2020-179T10:15:13Z" duration="1091" angle="52"/>
+</events>
+</eventfile>
