@@ -1,15 +1,14 @@
 ;; Ejemplo. Calculo de solapamiento entre observaciones
 ;; TODO List
 ;;     - Arreglar overlap-condition (DONE)
-;;     - Incluir nueva regla/restriccion para observaciones demasiado
-;;     cercanas aunque no solapen (DONE)
+;;     - Incluir nueva regla/restriccion para observaciones demasiado cercanas aunque no solapen (DONE)
 ;;     - Restricciones en el uso de recursos (power & bandwidth)
-;;     - Hacer uso de los modulos para organizar la ejecucion de las
-;;       distintas reglas
+;;     - Hacer uso de los modulos para organizar la ejecucion de las distintas reglas (DONE)
 ;;     - No me gusta el hecho 'restriction' tal y como está. No generaliza muy bien...
 ;;     - Limitar el cálculo de restricciones a un periodo de tiempo dado
 ;;     - Implementar restricciones para la transición entre observaciones (en verdad, aplican sobre los modos pero para el caso es lo mismo)
 ;;     - Testing con cientos o miles de observaciones. Escribir un generador.
+;;     - Volcar las violaciones de las restricciones a un fichero de salida
 
 (defmodule MAIN
   (export deftemplate initial-fact
@@ -17,7 +16,8 @@
 	  too-close restriction same-module-time-overlapping
 	  incompat-observations-time-overlapping)
 	  (export deffunction ?ALL))
-	  
+
+;; Observation class. Auto-explainable
 (deftemplate MAIN::observation
         (slot start-time)
         (slot end-time)
@@ -26,34 +26,46 @@
         (slot module)
         (slot instance-id))
 
+;; Event class. Auto-explainable
 (deftemplate MAIN::event
   (slot start-time)
   (slot end-time)
   (slot eventname)
   (slot occurrence))
-                        
+
+;; Class for representing two overlapping observations without any consideration
 (deftemplate MAIN::time-overlapping
 		(slot instance-1)
 		(slot instance-2))
-		
+
+;; Class for representing observations that are too-close according to
+;; a given threshold
 (deftemplate MAIN::too-close
          (slot instance-1)
          (slot instance-2))
-		
+
+;; Class for representing detected overlapping observation instances
+;; that shouldn´t overlap because there exists a
+;; same-module-restriction between them
 (deftemplate MAIN::same-module-time-overlapping
 		(slot module-name)
 		(slot instance-1)
 		(slot instance-2))		
 
+;; Class for representing detected overlapping observations instances
+;; that shouldn't overlap because there exists a name-restriction between them 
 (deftemplate MAIN::incompat-observations-time-overlapping
 		(slot instance-1)
 		(slot instance-2))
-				
+
+;; Class for specifying the different type of restrictions among observations
 (deftemplate MAIN::restriction
          (slot name)
          (multislot incompat-observations (type SYMBOL) (cardinality 2 2))
          (slot delta (type NUMBER)))	
-         				
+
+;; Auxiliary functions for defining basic conditions among
+;; observations and/or events 
 (deffunction MAIN::overlap-condition (?ti1 ?tf1 ?ti2 ?tf2)
          (or (and (>= ?ti1 ?ti2) (< ?ti1 ?tf2))
              (and (> ?tf1 ?ti2) (<= ?tf1 ?tf2))
@@ -63,41 +75,46 @@
 (deffunction MAIN::too-close-condition (?ti1 ?tf1 ?ti2 ?tf2 ?delta)
 		(or (and (>= (+ ?tf1 ?delta) ?ti2) (<= (+ ?tf1 ?delta) ?tf2))
 		    (and (>= (+ ?tf2 ?delta) ?ti1) (<= (+ ?tf2 ?delta) ?tf1))))            
-             	
-(deffacts MAIN::datos
-        (observation (start-time 10) (end-time 20) (obsname EUI_FLUSH) (experiment EUI) (module FLUSH) (instance-id 1))
-        (observation (start-time 30) (end-time 40) (obsname EUI_FLUSH) (experiment EUI) (module FLUSH) (instance-id 2))
-        (observation (start-time 35) (end-time 39) (obsname EUI_FLUSH) (experiment EUI) (module FLUSH) (instance-id 3))
-        (observation (start-time 100) (end-time 200) (obsname EUI_FLUSH) (experiment EUI) (module FLUSH) (instance-id 4))
-        (observation (start-time 135) (end-time 142) (obsname MAG_EQUAL8) (experiment MAG) (module DEFAULT) (instance-id 5))
-        (observation (start-time 100) (end-time 198) (obsname MAG_NORMAL) (experiment MAG) (module DEFAULT) (instance-id 6))
-        (observation (start-time 135) (end-time 141) (obsname MAG_LOW) (experiment MAG) (module DEFAULT) (instance-id 7))
-        (observation (start-time 30) (end-time 40) (obsname MAG_LOW) (experiment MAG) (module DEFAULT) (instance-id 8))
-        (observation (start-time 50) (end-time 60) (obsname MAG_HIGH) (experiment MAG) (module DEFAULT) (instance-id 9))
-        (restriction (name cant-overlap-observations) (incompat-observations MAG_EQUAL8 EUI_FLUSH))
-        (restriction (name too-close) (incompat-observations MAG_HIGH EUI_FLUSH) (delta 10))
-        (max-power-allowed 200)
-        (max-bandwidth-allowed 2000)
-        (start-calculation))
 
+;; ###########################
+;; The Facts
+;; ###########################
+
+;; Non-problem-related facts for controlling the execution
 (deffacts MAIN::control-information
-  (phase-sequence OBS_CONSTRAINTS EVENT_CONSTRAINTS))
+  (phase-sequence OBS_CONSTRAINTS EVENT_CONSTRAINTS END))
+
+;; Global restriction facts. Eventually they will  be moved out to an external file
+(deffacts MAIN::data
+        (max-power-allowed 200)
+        (max-bandwidth-allowed 2000))
+
+;; Load the problem-related facts
+(defrule MAIN::preload-facts-and-start
+  =>
+;;  (load "resources/event_facts.clp")
+  (load "/Users/ffelix/Workspaces/CLIPS/ConstraintsChecking/src/resources/observation_facts.clp")
+  (open "/tmp/violations.txt" outputFile "w")
+  (reset))
+
+;; ##########################
+;; Execution control
+;; ##########################
 
 (defrule MAIN::change-phase
   ?list <- (phase-sequence ?next-phase $?other-phases)
   =>
- (focus ?next-phase)
  (retract ?list)
- (assert (phase-sequence ?other-phases)))
+ (assert (phase-sequence ?other-phases))
+ (focus ?next-phase))
 
 ;; ##############################
 ;; Module: OBS_CONSTRAINTS
 ;; ##############################
 
-(defmodule OBS_CONSTRAINTS 
-                    (import MAIN deftemplate observation time-overlapping same-module-time-overlapping 
-                                 too-close restriction incompat-observations-time-overlapping initial-fact)
-				   (import MAIN deffunction ?ALL))
+(defmodule OBS_CONSTRAINTS (import MAIN deftemplate observation time-overlapping same-module-time-overlapping 
+                            too-close restriction incompat-observations-time-overlapping)
+			   (import MAIN deffunction ?ALL))
 
 (defrule OBS_CONSTRAINTS::time-overlap-rule
 		(observation (start-time ?st1) (end-time ?et1) (instance-id ?id1))
@@ -129,9 +146,23 @@
 		=>
 		(assert (incompat-observations-time-overlapping (instance-1 ?id1) (instance-2 ?id2))))        
 
+(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule
+  ?same <- (same-module-time-overlapping (module-name ?) (instance-1 ?) (instance-2 ?))
+  =>
+  (printout outputFile ?same crlf))
 
 ;; ##############################
 ;; Module: EVENT_CONSTRAINTS
 ;; ##############################
 
 (defmodule EVENT_CONSTRAINTS (import MAIN deftemplate observation event restriction))
+
+;; ##############################
+;; Module: END
+;; ##############################
+
+(defmodule END)
+(defrule END::computation-finished-rule 
+  =>
+  (close outputFile)
+  (exit 0))
