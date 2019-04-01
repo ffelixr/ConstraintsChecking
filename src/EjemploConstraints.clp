@@ -164,23 +164,33 @@
 		 (observation-1 ?n1) (instance-1 ?id1)
 		 (observation-2 ?n2) (instance-2 ?id2))))
 
-(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule-1
-  (declare (salience -1))
-        ?tooclose <- (too-close)
-        =>
-	(printout-violation outputFile ?tooclose))
+(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule
+   (declare (salience -1))
+   (same-module-time-overlapping)
+   (too-close)
+   (incompat-observations-time-overlapping)
+   =>
+   (do-for-all-facts ((?violation same-module-time-overlapping too-close incompat-observations-time-overlapping))
+                     TRUE
+                     (printout-violation outputFile ?violation)))
+   
+;;(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule-1
+;;  (declare (salience -1))
+;;        ?tooclose <- (too-close)
+;;        =>
+;;	(printout-violation outputFile ?tooclose))
 
-(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule-2
-  (declare (salience -2))
-        ?same <- (same-module-time-overlapping)
-        =>
-	(printout-violation outputFile ?same))
+;;(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule-2
+;;  (declare (salience -2))
+;;        ?same <- (same-module-time-overlapping)
+;;        =>
+;;	(printout-violation outputFile ?same))
        
-(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule-3
-  (declare (salience -3))
-        ?incompat <- (incompat-observations-time-overlapping)
-        =>
-	(printout-violation outputFile ?incompat))
+;;(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule-3
+;;  (declare (salience -3))
+;;        ?incompat <- (incompat-observations-time-overlapping)
+;;        =>
+;;	(printout-violation outputFile ?incompat))
 
 ;; ##############################
 ;; Module: EVENT_CONSTRAINTS
