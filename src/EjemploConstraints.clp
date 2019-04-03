@@ -3,7 +3,9 @@
 ;;     - Arreglar overlap-condition (DONE)
 ;;     - Incluir nueva regla/restriccion para observaciones demasiado cercanas aunque no solapen (DONE)
 ;;     - Hacer uso de los modulos para organizar la ejecucion de las distintas reglas (DONE)
-;;     - Volcar las violaciones de las restricciones a un fichero de salida
+;;     - Volcar las violaciones de las restricciones a un fichero de salida (DONE)
+;;     - Implementar una regla para el caso de observaciones que requieren de un evento previo o estar incluido en una
+;;       fase o ventana (puerta abierta, remote sensing window,...)
 ;;     - Restricciones en el uso de recursos (power & bandwidth)
 ;;     - No me gusta el hecho 'restriction' tal y como está. No generaliza muy bien...
 ;;     - Limitar el cálculo de restricciones a un periodo de tiempo dado
@@ -174,23 +176,6 @@
                      TRUE
                      (printout-violation outputFile ?violation)))
    
-;;(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule-1
-;;  (declare (salience -1))
-;;        ?tooclose <- (too-close)
-;;        =>
-;;	(printout-violation outputFile ?tooclose))
-
-;;(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule-2
-;;  (declare (salience -2))
-;;        ?same <- (same-module-time-overlapping)
-;;        =>
-;;	(printout-violation outputFile ?same))
-       
-;;(defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule-3
-;;  (declare (salience -3))
-;;        ?incompat <- (incompat-observations-time-overlapping)
-;;        =>
-;;	(printout-violation outputFile ?incompat))
 
 ;; ##############################
 ;; Module: EVENT_CONSTRAINTS
