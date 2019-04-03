@@ -2,13 +2,18 @@
 ;; TODO List
 ;;     - Arreglar overlap-condition (DONE)
 ;;     - Incluir nueva regla/restriccion para observaciones demasiado cercanas aunque no solapen (DONE)
-;;     - Restricciones en el uso de recursos (power & bandwidth)
 ;;     - Hacer uso de los modulos para organizar la ejecucion de las distintas reglas (DONE)
+;;     - Volcar las violaciones de las restricciones a un fichero de salida (DONE)
+;;     - Implementar una regla para el caso de observaciones que requieren de un evento previo o estar incluido en una
+;;       fase o ventana (puerta abierta, remote sensing window,...)
+;;     - Restricciones en el uso de recursos (power & bandwidth)
 ;;     - No me gusta el hecho 'restriction' tal y como está. No generaliza muy bien...
 ;;     - Limitar el cálculo de restricciones a un periodo de tiempo dado
 ;;     - Implementar restricciones para la transición entre observaciones (en verdad, aplican sobre los modos pero para el caso es lo mismo)
 ;;     - Testing con cientos o miles de observaciones. Escribir un generador.
-;;     - Volcar las violaciones de las restricciones a un fichero de salida
+
+(defglobal
+  ?*counter* = 0)
 
 (defmodule MAIN
   (export deftemplate initial-fact
@@ -41,22 +46,27 @@
 ;; Class for representing observations that are too-close according to
 ;; a given threshold
 (deftemplate MAIN::too-close
-         (slot instance-1)
-         (slot instance-2))
+  (slot observation-1)
+  (slot observation-2)
+  (slot instance-1)
+  (slot instance-2))
 
 ;; Class for representing detected overlapping observation instances
 ;; that shouldn´t overlap because there exists a
 ;; same-module-restriction between them
 (deftemplate MAIN::same-module-time-overlapping
-		(slot module-name)
-		(slot instance-1)
-		(slot instance-2))		
+        (slot experiment)
+	(slot module-name)
+	(slot instance-1)
+	(slot instance-2))		
 
 ;; Class for representing detected overlapping observations instances
 ;; that shouldn't overlap because there exists a name-restriction between them 
 (deftemplate MAIN::incompat-observations-time-overlapping
-		(slot instance-1)
-		(slot instance-2))
+        (slot observation-1)
+        (slot observation-2)
+        (slot instance-1)
+	(slot instance-2))
 
 ;; Class for specifying the different type of restrictions among observations
 (deftemplate MAIN::restriction
@@ -75,6 +85,13 @@
 (deffunction MAIN::too-close-condition (?ti1 ?tf1 ?ti2 ?tf2 ?delta)
 		(or (and (>= (+ ?tf1 ?delta) ?ti2) (<= (+ ?tf1 ?delta) ?tf2))
 		    (and (>= (+ ?tf2 ?delta) ?ti1) (<= (+ ?tf2 ?delta) ?tf1))))            
+
+(deffunction MAIN::printout-violation (?output ?factId)
+             (printout ?output "==== Constraint Violation # "
+		       ?*counter* " =====" crlf)
+             (ppfact ?factId ?output crlf)
+             (printout ?output "===================================" crlf)
+	     (bind ?*counter* (+ ?*counter* 1)))  
 
 ;; ###########################
 ;; The Facts
@@ -113,43 +130,52 @@
 ;; ##############################
 
 (defmodule OBS_CONSTRAINTS (import MAIN deftemplate observation time-overlapping same-module-time-overlapping 
-                            too-close restriction incompat-observations-time-overlapping)
-			   (import MAIN deffunction ?ALL))
+        too-close restriction incompat-observations-time-overlapping)
+	(import MAIN deffunction ?ALL))
 
 (defrule OBS_CONSTRAINTS::time-overlap-rule
-		(observation (start-time ?st1) (end-time ?et1) (instance-id ?id1))
-		(observation (start-time ?st2) (end-time ?et2&:(overlap-condition ?st1 ?et1 ?st2 ?et2)) (instance-id ?id2&~?id1))
-		(not (time-overlapping (instance-1 ?id2) (instance-2 ?id1)))
-		=>
-		(assert (time-overlapping (instance-1 ?id1) (instance-2 ?id2))))
+	(observation (start-time ?st1) (end-time ?et1) (instance-id ?id1))
+	(observation (start-time ?st2) (end-time ?et2&:(overlap-condition ?st1 ?et1 ?st2 ?et2)) (instance-id ?id2&~?id1))
+	(not (time-overlapping (instance-1 ?id2) (instance-2 ?id1)))
+	=>
+	(assert (time-overlapping (instance-1 ?id1) (instance-2 ?id2))))
 
 (defrule OBS_CONSTRAINTS::same-module-time-overlap-rule
-		?tover <- (time-overlapping (instance-1 ?id1) (instance-2 ?id2))
-		(observation (module ?n) (instance-id ?id1))
-		(observation (module ?n) (instance-id ?id2))
-		=>
-		(assert (same-module-time-overlapping (module-name ?n) (instance-1 ?id1) (instance-2 ?id2))))
+	(time-overlapping (instance-1 ?id1) (instance-2 ?id2))
+	(observation (experiment ?e) (module ?n) (instance-id ?id1))
+	(observation (experiment ?o) (module ?n) (instance-id ?id2))
+	=>
+	(assert (same-module-time-overlapping (experiment ?e) (module-name ?n) (instance-1 ?id1) (instance-2 ?id2))))
 
 (defrule OBS_CONSTRAINTS::too-close-rule
         (restriction (name too-close) (incompat-observations ?o1 ?o2) (delta ?d)) 
-		(observation (obsname ?o1) (start-time ?st1) (end-time ?et1) (instance-id ?id1))
-		(observation (obsname ?o2) (start-time ?st2) (end-time ?et2&:(too-close-condition ?st1 ?et1 ?st2 ?et2 ?d)) (instance-id ?id2&~?id1))
-		(not (too-close (instance-1 ?id2) (instance-2 ?id1)))
-		=>
-		(assert (too-close (instance-1 ?id1) (instance-2 ?id2))))
+	(observation (obsname ?o1) (start-time ?st1) (end-time ?et1) (instance-id ?id1))
+	(observation (obsname ?o2) (start-time ?st2) (end-time ?et2&:(too-close-condition ?st1 ?et1 ?st2 ?et2 ?d)) (instance-id ?id2&~?id1))
+	(not (too-close (instance-1 ?id2) (instance-2 ?id1)))
+	=>
+	(assert (too-close (observation-1 ?o1) (instance-1 ?id1)
+			   (observation-2 ?o2) (instance-2 ?id2))))
 	
 (defrule OBS_CONSTRAINTS::incompat-observations-time-overlap-rule
-		?tover <- (time-overlapping (instance-1 ?id1) (instance-2 ?id2))
-		?o1 <- (observation (obsname ?n1) (instance-id ?id1))
-		?o2 <- (observation (obsname ?n2) (instance-id ?id2))
-		(restriction (name cant-overlap-observations) (incompat-observations ?n1 ?n2))
-		=>
-		(assert (incompat-observations-time-overlapping (instance-1 ?id1) (instance-2 ?id2))))        
+	(time-overlapping (instance-1 ?id1) (instance-2 ?id2))
+	(observation (obsname ?n1) (instance-id ?id1))
+	(observation (obsname ?n2) (instance-id ?id2))
+	(restriction (name cant-overlap-observations) (incompat-observations ?n1 ?n2))
+	=>
+	(assert (incompat-observations-time-overlapping
+		 (observation-1 ?n1) (instance-1 ?id1)
+		 (observation-2 ?n2) (instance-2 ?id2))))
 
 (defrule OBS_CONSTRAINTS::dump-obs-constraints-violations-rule
-  ?same <- (same-module-time-overlapping (module-name ?) (instance-1 ?) (instance-2 ?))
-  =>
-  (printout outputFile ?same crlf))
+   (declare (salience -1))
+   (same-module-time-overlapping)
+   (too-close)
+   (incompat-observations-time-overlapping)
+   =>
+   (do-for-all-facts ((?violation same-module-time-overlapping too-close incompat-observations-time-overlapping))
+                     TRUE
+                     (printout-violation outputFile ?violation)))
+   
 
 ;; ##############################
 ;; Module: EVENT_CONSTRAINTS
