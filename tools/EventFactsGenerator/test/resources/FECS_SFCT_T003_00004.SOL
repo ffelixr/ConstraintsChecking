@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eventfile>
+<eventfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://esa.esoc.events gen_event_sample.xsd" xmlns="http://esa.esoc.events" xmlns:ems="http://esa.esoc.ems">
 <header format_version="1" gen_time="2017-142T15:19:34Z" validity_start="2020-004T21:28:48Z" validity_end="2020-179T18:37:12Z" spacecraft="Solar Orbiter" icd_version="MOC-SOC-1.2"/>
 <events>
 <MTP_BOUND time="2020-004T21:28:48Z" duration="15109704" m_count="03"/>
