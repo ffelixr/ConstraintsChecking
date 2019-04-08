@@ -99,7 +99,7 @@
 
 ;; The first event/obs is contained within the second one
 
-(deffunction MAIN::contained-condition (?ti1 ?tf1 ?ti2 ?tf2)
+(deffunction MAIN::containing-condition (?ti1 ?tf1 ?ti2 ?tf2)
   (and (>= ?ti1 ?ti2) (< ?ti1 ?tf2) (<= ?tf1 ?tf2) (> ?tf1 ?ti2)))
 
 (deffunction MAIN::too-close-condition (?ti1 ?tf1 ?ti2 ?tf2 ?delta)
@@ -208,7 +208,7 @@
 
 (defrule EVENT_CONSTRAINTS::observations-out-of-event-window
   (observation (obsname ?o1) (instance-id ?id1) (start-time ?st1) (end-time ?et1))
-  (not (event (eventname ?ev1) (instance-id ?id2) (start-time ?st2) (end-time ?et2&:(contained-condition ?st1 ?et1 ?st2 ?et2))))
+  (not (event (eventname ?ev1) (instance-id ?id2) (start-time ?st2) (end-time ?et2&:(containing-condition ?st1 ?et1 ?st2 ?et2))))
   (restriction-event-obs (restriction-name obs-in-event-window) (event ?ev1) (observation ?o1)) 
   =>
   (assert (observation-out-of-window (observation-1 ?o1) (instance-obs ?id1) (event-1 ?ev1))))
